@@ -1,5 +1,18 @@
 # SampleKarmaJasmineProject
 
+## Test suite command
+
+`ng test --config tutor-karma.conf.js --single-run` starts Karma with the `tutor-karma.conf.js` config file, which then searches for any files ending in `.spec.ts` files located in `src/`.
+
+This Karma config has been modified to:
+
+1. Use PhantomJS for headless tests by including `karma-phantomjs-launcher` instead of `karma-chrome-launcher`.
+2. Use the Reporter `karma-structured-json-reporter` instead of `karma-jasmine-html-reporter`.
+
+Learners will be prompted to run the standard `ng test` command in a Project, which starts a watcher and reports test output in Chrome.
+
+# Default Angular CLI README appears below
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
 
 ## Development server
