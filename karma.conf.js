@@ -10,6 +10,7 @@ module.exports = function (config) {
       require('karma-phantomjs-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage-istanbul-reporter'),
+      require('karma-structured-json-reporter'),
       require('@angular/cli/plugins/karma')
     ],
     client:{
@@ -33,12 +34,15 @@ module.exports = function (config) {
     },
     reporters: config.angularCli && config.angularCli.codeCoverage
               ? ['progress', 'coverage-istanbul']
-              : ['progress', 'kjhtml'],
+              : ['progress', 'json-result'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['PhantomJS'],
-    singleRun: false
+    singleRun: false,
+    jsonResultReporter: {
+      isSynchronous: true
+    },
   });
 };
