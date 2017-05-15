@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SampleComponent implements OnInit {
 
+  sampleTitle: string;
+
   constructor() { }
 
   ngOnInit() {
+
+  	// @h1-contains-title, set this string to "Sample Component Loaded"
+  	this.sampleTitle = "oops";
   }
 
 }

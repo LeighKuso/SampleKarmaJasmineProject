@@ -16,10 +16,20 @@ describe('SampleComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SampleComponent);
     component = fixture.componentInstance;
+    component.ngOnInit();
+  });
+    
+  it(`should contain an h1 tag @contains-h1`, async(() => {
+    const fixture = TestBed.createComponent(SampleComponent);
     fixture.detectChanges();
-  });
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1')).not.toBe(null);
+  }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+  it(`should render title in an h1 tag @h1-contains-title`, async(() => {
+    const fixture = TestBed.createComponent(SampleComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h1').textContent).toContain('Sample Component Loaded');
+  }));
 });
