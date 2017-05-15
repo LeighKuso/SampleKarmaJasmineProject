@@ -13,9 +13,9 @@ Learners will be prompted to run the standard `ng test` command in a Project, wh
 
 ## Steps to pass all tests
 
-1. In `src/app/app.component.html` on line 2, replace `<h1>Hi</h1>` with `<app-sample></app-sample>`.
-2. In `src/app/sample/sample.component.ts` on line 17, replace the value of `this.sampleTitle` with `Sample Component Loaded`.
-3. In `src/app/sample/sample.component.html` on line 2, change the `p` tags to `h1`.
+1. `@does-contain-app-sample` - In `src/app/app.component.html` on line 2, replace `<h1>Hi</h1>` with `<app-sample></app-sample>`.
+2. `@contains-h1` - In `src/app/sample/sample.component.ts` on line 17, replace the value of `this.sampleTitle` with `Sample Component Loaded`.
+3. `@h1-contains-title` - In `src/app/sample/sample.component.html` on line 2, change the `p` tags to `h1`.
 
 # Default Angular CLI README appears below
 
