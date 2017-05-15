@@ -2,14 +2,20 @@
 
 ## Test suite command
 
-`ng test --config tutor-karma.conf.js --single-run` starts Karma with the `tutor-karma.conf.js` config file, which then searches for any files ending in `.spec.ts` files located in `src/`.
+`npm run tutorTest` runs `ng test --config tutor-karma.conf.js --single-run`, which starts Karma with the `tutor-karma.conf.js` config file, which then searches for any files ending in `.spec.ts` files located in `src/`.
 
 This Karma config has been modified to:
 
 1. Use PhantomJS for headless tests by including `karma-phantomjs-launcher` instead of `karma-chrome-launcher`.
 2. Use the Reporter `karma-structured-json-reporter` instead of `karma-jasmine-html-reporter`.
 
-Learners will be prompted to run the standard `ng test` command in a Project, which starts a watcher and reports test output in Chrome.
+Learners will be prompted to run the standard `ng test` command in a Project, which runs Karma from the standard karma.conf.js and watches and reports test output in Chrome.
+
+## Steps to pass all tests
+
+1. In `src/app/app.component.html` on line 2, replace `<h1>Hi</h1>` with `<app-sample></app-sample>`.
+2. In `src/app/sample/sample.component.ts` on line 17, replace the value of `this.sampleTitle` with `Sample Component Loaded`.
+3. In `src/app/sample/sample.component.html` on line 2, change the `p` tags to `h1`.
 
 # Default Angular CLI README appears below
 
