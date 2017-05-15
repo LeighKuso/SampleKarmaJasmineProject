@@ -14,7 +14,7 @@ export class SampleComponent implements OnInit {
   ngOnInit() {
 
   	// @h1-contains-title, set this string to "Sample Component Loaded"
-  	this.sampleTitle = "oops";
+  	this.sampleTitle = "Sample Component Loaded";
   }
 
 }
